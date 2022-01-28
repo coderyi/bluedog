@@ -1,0 +1,17 @@
+<view class='container'>
+  <view>
+    <view class='other'>
+      <view class='share other-item'>
+        <button open-type='share' class='btn' hover-class='none'>
+          <text class='iconfont icon-share'></text> 分享给朋友
+        </button>
+      </view>
+
+      <view class='about other-item'>
+        <navigator url='../../subPages/about-page/about-page' hover-class='none'>
+          <text class='iconfont icon-about'></text> 关于
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

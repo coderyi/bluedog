@@ -1,0 +1,32 @@
+<wxs module="utils">
+module.exports.max = function(n1, n2) {
+  return Math.max(n1, n2)
+}
+module.exports.len = function(arr) {
+  arr = arr || []
+  return arr.length
+}
+</wxs>
+<view class='search-wrapper'>
+  <view class='search-header topbar'>
+    <input class='search-input' placeholder-class='phcolor' placeholder='{{placeholder}}' bindinput='search'></input>
+    <text class='iconfont icon-search'></text>
+  </view>
+  <view class='result-list'>
+    <view wx:if='{{devices.length}}' class='ble-box'>
+      <view wx:for='{{ value.length ? searchDevices : devices}}' wx:for-item='item' wx:key='index' class='ble-section' bindtap='goDetail'            
+        data-device-id="{{item.deviceId}}"
+        data-name="{{item.name || item.localName}}">
+        <view class='ble-info'>
+          <view class='ble-name line-ellipsis'>{{item.name}}
+          </view>
+          <view class='line-ellipsis'>信号强度: {{item.RSSI}}dBm ({{utils.max(0, item.RSSI + 100)}}%)</view>
+          <view class='line-ellipsis'>UUID: {{item.deviceId}}</view>
+          <view class='line-ellipsis'>Service数量: {{utils.len(item.advertisServiceUUIDs)}}</view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+</view>

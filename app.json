@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/tabBar/device-list/device-list",
+    "pages/tabBar/more/more",
+    "pages/subPages/about-page/about-page",
+    "pages/subPages/device-detail/device-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0181FC",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#696969",
+    "selectedColor": "#0181FC",
+    "list": [
+      {
+        "pagePath": "pages/tabBar/device-list/device-list",
+        "text": "设备",
+        "iconPath": "assets/images/bluetooth.png",
+        "selectedIconPath": "assets/images/bluetoothSelect.png"
+      },
+      {
+        "pagePath": "pages/tabBar/more/more",
+        "text": "更多",
+        "iconPath": "assets/images/more.png",
+        "selectedIconPath": "assets/images/moreSelect.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

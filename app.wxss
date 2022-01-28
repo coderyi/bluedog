@@ -1,0 +1,22 @@
+@import './assets/font/icon.wxss';
+
+
+.line-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* topbar */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+
+.phcolor {
+  color: #999;
+}

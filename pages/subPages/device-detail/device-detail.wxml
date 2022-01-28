@@ -1,0 +1,17 @@
+
+<view class='detail-wrapper'>
+  <view class='detail-header'>
+    <view class='line-ellipsis'>UUID: {{deviceId}}</view>
+  </view>
+  <view class='result-list'>
+    <view wx:for='{{allServiceID}}' wx:for-item='service' wx:key='{{service.serviceId}}' class='ble-box'>
+      <view class='title'>uuid:{{service}} </view>
+      <view wx:for='{{allService[service].characteristics}}' wx:for-item='item' wx:key='{{item.uuid}}' class='ble-section'>
+        <view class='ble-info'>
+          <view class='line-ellipsis'>UUID: {{item.uuid}}</view>
+          <view class='line-ellipsis'>{{item.properties.notify ? "notify" : ""}} {{item.properties.write ? "write" : ""}} {{item.properties.indicate ? "indicate" : ""}} {{item.properties.read ? "read" : ""}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
